@@ -1,0 +1,261 @@
+.root,
+.root *,
+.searchMenu,
+.searchMenu * {
+  box-sizing: border-box;
+  font-family: "Shabnam", Tahoma, Arial, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.root {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  color: #111827;
+  direction: rtl;
+}
+
+.trigger {
+  width: 100%;
+  height: 42px;
+  min-width: 0 !important;
+  padding: 0 10px !important;
+  border: 1px solid #d2dde2;
+  border-radius: 11px;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: #111827;
+  background: #ffffff;
+  cursor: pointer;
+  outline: 0;
+  text-align: right;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: #aebfc6;
+}
+
+.triggerOpen {
+  border-color: #4ba39d;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.09);
+}
+
+.trigger:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+.trigger > svg,
+.trigger > span:first-child {
+  flex: 0 0 auto;
+  color: #5d6d76;
+}
+
+.triggerText {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  color: #111827;
+  font-size: var(--dropdown-item-font-size, 13.5px);
+  line-height: 1.8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  color: #8a98a1;
+}
+
+.chevron,
+.chevronOpen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: #5d6d76;
+  transition: transform 160ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.searchMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 6px;
+  border: 1px solid #d2dde2;
+  border-radius: 11px;
+  color: #111827;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.2);
+  direction: rtl;
+}
+
+.searchBox {
+  height: 39px;
+  padding: 0 9px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #dce5e8;
+  border-radius: 9px;
+  color: #64748b;
+  background: #f7fafb;
+}
+
+.searchBox:focus-within {
+  color: #f97316;
+  border-color: #ff9a3d;
+  box-shadow: 0 0 0 2px rgba(15, 118, 110, 0.07);
+}
+
+.searchBox input {
+  min-width: 0;
+  height: 100%;
+  flex: 1 1 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: #111827;
+  background: transparent;
+  font-size: var(--dropdown-item-font-size, 13.5px);
+  text-align: right;
+}
+
+.searchBox input::placeholder {
+  color: #91a0a8;
+  opacity: 1;
+}
+
+.clearButton {
+  width: 26px !important;
+  min-width: 26px !important;
+  height: 26px;
+  padding: 0 !important;
+  border: 0;
+  border-radius: 7px;
+  flex: 0 0 auto;
+  display: grid !important;
+  place-items: center;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+}
+
+.clearButton:hover {
+  color: #a33b3b;
+  background: #fff2f2;
+}
+
+.optionList {
+  min-height: 0;
+  margin-top: 5px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.option {
+  width: 100%;
+  min-width: 0 !important;
+  min-height: 38px;
+  padding: 7px 9px !important;
+  border: 0;
+  border-radius: 8px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  color: #111827;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--dropdown-item-font-size, 13.5px);
+  line-height: 1.8;
+  text-align: right;
+}
+
+.option:hover:not(:disabled) {
+  color: #f97316;
+  background: #fff7ed;
+}
+
+.option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.optionSelected {
+  color: #f97316;
+  background: #fff1e6;
+}
+
+.option > svg {
+  flex: 0 0 auto;
+}
+
+.optionText {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+}
+
+.optionText strong {
+  overflow: hidden;
+  color: inherit;
+  font-size: var(--dropdown-item-font-size, 13.5px);
+  line-height: 1.8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionText small {
+  overflow: hidden;
+  color: #7b8992;
+  font-size: 13.5px;
+  line-height: 1.7;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 16px 9px;
+  color: #73818a;
+  font-size: 13.5px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.compact .trigger {
+  height: 36px;
+  padding-inline: 9px !important;
+  border-radius: 9px;
+  background: #f8fbfb;
+  border-color: #dbe5e8;
+}
+
+.compact .triggerText {
+  font-size: var(--dropdown-item-font-size, 13.5px);
+}
+
+.spin {
+  display: inline-flex;
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
