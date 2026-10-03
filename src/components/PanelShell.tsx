@@ -8,13 +8,21 @@ import PWAInstallPrompt from "./pwa/PWAInstallPrompt";
 type Role = "admin" | "marketer" | "customer";
 const menus = {
   admin: [
-    ["/admin/dashboard","داشبورد","dashboard"], ["#","سفارش‌ها","orders"], ["#","محصولات و برندها","products"], ["#","مشتریان","users"], ["#","بازاریاب‌ها","marketer"], ["/admin/reports","گزارشات","reports"],
+    ["/admin/dashboard","داشبورد","dashboard"],
+    ["/admin/companies","شرکت‌ها و تأمین","users"],
+    ["/admin/categories","دسته‌بندی‌ها","products"],
+    ["/admin/brands","برندها","products"],
+    ["/admin/products","محصولات","products"],
+    ["#","سفارش‌ها","orders"],
+    ["#","مشتریان","users"],
+    ["#","بازاریاب‌ها","marketer"],
+    ["/admin/reports","گزارشات","reports"],
   ],
   marketer: [
-    ["/marketer/dashboard","داشبورد من","dashboard"], ["#","مشتریان من","users"], ["#","ثبت سفارش","orders"], ["#","محصولات","products"], ["/marketer/reports","گزارش عملکرد","reports"],
+    ["/marketer/dashboard","داشبورد من","dashboard"], ["#","مشتریان من","users"], ["#","ثبت سفارش","orders"], ["/marketer/products","محصولات","products"], ["/marketer/reports","گزارش عملکرد","reports"],
   ],
   customer: [
-    ["/customer/home","خانه","home"], ["#","محصولات","products"], ["#","سبد خرید","cart"], ["/customer/orders","سفارش‌های من","orders"], ["#","حساب کاربری","profile"],
+    ["/customer/home","خانه","home"], ["/customer/products","محصولات","products"], ["#","سبد خرید","cart"], ["/customer/orders","سفارش‌های من","orders"], ["#","حساب کاربری","profile"],
   ],
 } as const;
 
